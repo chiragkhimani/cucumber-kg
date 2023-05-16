@@ -1,10 +1,22 @@
 package com.automation.steps;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class StepDefinition {
+
+    @Before
+    public void setUp(){
+
+    }
+
+    @After
+    public void cleanUp(){
+
+    }
 
     @Given("user opens the website")
     public void user_opens_the_website() {
@@ -13,11 +25,6 @@ public class StepDefinition {
 
     @Given("verify user is on login page")
     public void verify_user_is_on_login_page() {
-
-    }
-
-    @When("user enters valid credentials")
-    public void user_enters_valid_credentials() {
 
     }
 
@@ -61,4 +68,20 @@ public class StepDefinition {
 
     }
 
+
+    @Then("verify user could not access home page")
+    public void verifyUserCouldNotAccessHomePage() {
+
+    }
+
+    @When("user copy paste valid credentials")
+    public void userCopyPasteValidCredentials() {
+
+    }
+
+    @When("user enters username {string} and password {string}")
+    public void userEntersUsernameAndPassword(String username, String password) {
+        System.out.println("Login with username " + username);
+        System.out.println("Login with password " + password);
+    }
 }
